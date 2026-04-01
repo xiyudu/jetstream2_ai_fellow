@@ -10,6 +10,6 @@ For this project, we have two major goals:
 JAX-MD is an end-to-end differentiable molecular dynamics (MD) engine that makes parameter optimizations through a MD simulation easy. For more information, check out [JAX-MD's GitHub Repo](https://github.com/jax-md/jax-md). 
 
 ## Table of Content
-[JAX-MD Installation Tutorial for Jetstream2]()
+[JAX-MD Installation Tutorial for Jetstream2](https://github.com/xiyudu/jetstream2_ai_fellow/blob/main/tutorial/installation.md)
 
 [Helper Function Library for Lattice Initialization and Loss Function]()
