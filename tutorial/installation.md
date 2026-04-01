@@ -4,16 +4,21 @@ Follow the Jetstream2 [documentation](https://docs.jetstream-cloud.org/getting-s
 After the instance is set up, launch the instance.
 
 We will use `pip3` to install `jax` and `jax-md` and we want to do it locally. To properly install the desired packages, we will need to make a local `python3` environment using the following command:
-`python3 -m venv local/jax_md_install`
+```
+python3 -m venv local/jax_md_install
+```
 Here, I created a folder called `jax_md_install` under the `local` folder I created to store potential software packages.
 
 After local environment setup, we will put the following lines in our `.bashrc` file so that we use the correct `python` distribution.
-`alias python="/home/exouser/local/jax_md_install/bin/python3"`
-`alias pip="/home/exouser/local/jax_md_install/bin/pip3"`
-
+```
+alias python="/home/exouser/local/jax_md_install/bin/python3"
+alias pip="/home/exouser/local/jax_md_install/bin/pip3"
+```
 Then we will follow the installation instructions for [`jax`](https://github.com/jax-ml/jax?tab=readme-ov-file#installation) and [`jax-md`](https://github.com/jax-md/jax-md?tab=readme-ov-file) on their GitHub Page to install the two packages.
-`pip install -U "jax[cuda13]"`
-`pip install jax-md --upgrade`
+```
+pip install -U "jax[cuda13]"
+pip install jax-md --upgrade
+```
 (Note: the desired CUDA version might change for `jax` so always refer back to the GitHub link.)
 
 After everything is installed, here is a sample $NVE$ simulation to test the installation.
