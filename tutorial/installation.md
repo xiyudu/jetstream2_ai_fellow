@@ -117,3 +117,14 @@ R = state.position
 
 ### 2. Re-Initialization
 Jetstream2 allows us to shelve an instance or create an image so that our setup is not lost. To do that, follow the instructions in the [documentation](https://docs.jetstream-cloud.org/getting-started/snapshots/)
+
+### 3. Connect to Jupyter Notebook
+Since we had to set up our own `Python` environment to install the relevant packages, we cannot use the default `jupyter-ip.sh` script to launch a remote Jupyter notebook. We need to set up remote access using the following commands:
+```
+jupyter-lab --no-browser --port=8080 #this port number can be any number, just need to be consistent throughout
+ssh -L 8080:localhost:8080 exouser@<REMOTE_HOST>
+```
+The remote `Jupyter Notebook` can be accessed at
+```
+http://localhost:8080/
+```
