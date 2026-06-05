@@ -126,10 +126,11 @@ ssh -L 8080:localhost:8080 exouser@<REMOTE_HOST>
 ```
 The remote `Jupyter Notebook` can be accessed at
 ```
+http://localhost:8080/
+```
 
 ### 4. Running when Log Out
 ```
 nohup /home/exouser/local/jax_md_install/bin/python3 /home/exouser/project/opt_test/{code}
 ```
-http://localhost:8080/
-```
+
