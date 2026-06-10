@@ -130,7 +130,8 @@ http://localhost:8080/
 ```
 
 ### 4. Running when Log Out
+Jetstream2 has documentation [here](https://docs.jetstream-cloud.org/faq/general-faq/#what-are-the-ip-ranges-cidr-blocks-for-jetstream2) on how to keep a program running when disconnecting from the VM. One caveat is that when using `nohup`, one needs to make sure that the command is being called using its absolute path, instead of relative path. See below for an example:
 ```
 nohup /home/exouser/local/jax_md_install/bin/python3 /home/exouser/project/opt_test/{code}
 ```
-
+Here, instead of just calling `python`, I need to make sure to provide the absolute path for the `python` version I am calling, which is installed at `/home/exouser/local/jax_md_install/bin/python3`.
