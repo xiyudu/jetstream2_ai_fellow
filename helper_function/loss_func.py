@@ -24,7 +24,7 @@ def get_psi_k(displacement_all, k=6, r0=1.1, alpha=100):
     v_get_ylms = vmap(vmap(get_ylms))
     ds = displacement_all(R, R)
     r = space.distance(ds)
-    w = weight(r)
+    w = weight(r, r0=r0, alpha=alpha)
     psi_k = (np.sum(v_get_ylms(ds)*w, axis=0)/(jnp.sum(w, axis=0)+0.00001))
     return psi_k
 
